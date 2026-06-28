@@ -1,0 +1,217 @@
+/* --- Variáveis de cores para o tema claro (Padrão) --- */
+:root {
+    --cor-fundo: #f4f4f9;
+    --cor-fundo-alt: #eaeaef;
+    --cor-texto: #333333;
+    --cor-menu: #222222;
+    --cor-menu-texto: #ffffff;
+    --cor-destaque: #0066cc;
+    --cor-borda: #cccccc;
+}
+
+/* --- Variáveis de cores para o tema escuro (ativado via JS) --- */
+.tema-escuro {
+    --cor-fundo: #1e1e1e;
+    --cor-fundo-alt: #2a2a2a;
+    --cor-texto: #f4f4f9;
+    --cor-menu: #111111;
+    --cor-menu-texto: #ffffff;
+    --cor-destaque: #4da6ff;
+    --cor-borda: #444444;
+}
+
+/* --- Reset e Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Rolagem suave pelas âncoras */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: background-color 0.3s, color 0.3s; /* Transição suave de tema */
+}
+
+/* --- Menu de Navegação --- */
+header {
+    background-color: var(--cor-menu);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--cor-menu-texto);
+    text-decoration: none;
+    padding: 20px 15px;
+    display: block;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+#btn-tema {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#btn-tema:hover {
+    opacity: 0.8;
+}
+
+/* --- Estrutura das Seções --- */
+main {
+    margin-top: 60px; /* Espaço para o menu fixo não cobrir o conteúdo */
+}
+
+.secao {
+    min-height: 100vh; /* Garante que a seção ocupe a tela toda */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-alternativo {
+    background-color: var(--cor-fundo-alt);
+}
+
+.conteudo {
+    max-width: 800px;
+    width: 100%;
+}
+
+.conteudo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--cor-destaque);
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 10px;
+}
+
+.conteudo p, .conteudo ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.conteudo ul {
+    margin-left: 20px;
+}
+
+/* --- Portfólio (Grid de Projetos) --- */
+.grid-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card-projeto {
+    background-color: var(--cor-fundo-alt);
+    border: 1px solid var(--cor-borda);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    border-radius: 8px;
+    flex: 1 1 calc(33.333% - 15px); /* Flexbox para layout responsivo */
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: var(--cor-destaque);
+}
+
+/* --- Formulário de Contato --- */
+form {
+    background-color: var(--cor-fundo);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-input label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.grupo-input input, .grupo-input textarea {
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--cor-fundo-alt);
+    color: var(--cor-texto);
+}
+
+#btn-enviar {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#btn-enviar:hover {
+    background-color: #004c99;
+}
+
+/* --- Responsividade para celulares --- */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card-projeto {
+        flex: 1 1 100%;
+    }
+}

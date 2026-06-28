@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Jalmir Luiz Danielli Junior</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button id="btn-tema">Alternar Tema</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="secao">
+            <div class="conteudo">
+                <h2>Sobre mim</h2>
+                <p>Olá! Meu nome é Jalmir Luiz Danielli Junior, tenho 32 anos e sou estudante de CST ANÁLISE E DESENVOLVIMENTO DE SISTEMAS.</p>
+                <p>Sou apaixonado(a) por tecnologia, desenvolvimento, esportes e games. Atualmente, busco aprender e me aprimorar em desenvolvimento e programação.</p>
+            </div>
+        </section>
+
+        <section id="formacao" class="secao bg-alternativo">
+            <div class="conteudo">
+                <h2>Formação</h2>
+                <ul>
+                    <li><strong>Graduação:</strong> CST ANÁLISE E DESENVOLVIMENTO DE SISTEMAS - UNINTER (Em andamento)</li>
+                    <li><strong>Idiomas:</strong> Inglês - Básico</li>
+                    <li><strong>Cursos Extras:</strong> Introdução à programação - Udemy</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="portfolio" class="secao">
+            <div class="conteudo">
+                <h2>Portfólio</h2>
+                <p>Confira alguns dos meus trabalhos acadêmicos e projetos pessoais:</p>
+                <div class="grid-projetos">
+			<a href="https://drive.google.com/file/d/1KXh4zMnBOJUkOjKFztKMaC3ozt7FVCdg/view?usp=drive_link" target="_blank" class="card-projeto">Projetos: Desenvolvimento de servidores online de Asseto corsa, Battefield Bad Company 2, Project Cars 2 e Dayz</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="secao bg-alternativo">
+            <div class="conteudo">
+                <h2>Contato</h2>
+                <p>Ficou interessado(a)? Me envie uma mensagem!</p>
+                
+                <form id="form-contato">
+                    <div class="grupo-input">
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="usuario@dominio.com">
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="mensagem">Sua mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+
+                    <button type="submit" id="btn-enviar">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
